@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">WordCounter</string>
+    <string name="edit_text_hint">Enter your text here</string>
+    <string name="spinner_option_words">Words</string>
+    <string name="spinner_option_characters">Characters</string>
+    <string name="button_calculate">Calculate</string>
+    <string name="result_label">Result:</string>
+    <string name="toast_empty_input">Please enter some text</string>
+
+    <string-array name="count_options">
+        <item>@string/spinner_option_words</item>
+        <item>@string/spinner_option_characters</item>
+    </string-array>
+</resources>
