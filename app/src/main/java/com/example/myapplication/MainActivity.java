@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText txtInput;
     private Spinner spinnerCountType;
-    private Button btnCalculate;
     private TextView txtResult;
 
     @Override
@@ -25,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         txtInput = findViewById(R.id.txtInput);
         spinnerCountType = findViewById(R.id.spinnerCountType);
-        btnCalculate = findViewById(R.id.btnCalculate);
+        Button btnCalculate = findViewById(R.id.btnCalculate);
         txtResult = findViewById(R.id.txtResult);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
@@ -48,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
                 int result = 0;
 
                 if (choice.equals(getResources().getString(R.string.spinner_option_words))) {
-                    result = analyzer.countWords(input);
+                    result = TextAnalyzer.countWords(input);
                 } else if (choice.equals(getResources().getString(R.string.spinner_option_characters))) {
-                    result = analyzer.countCharacters(input);
+                    result = TextAnalyzer.countCharacters(input);
                 }
 
                 txtResult.setText(getString(R.string.result_label) + " " + result);
